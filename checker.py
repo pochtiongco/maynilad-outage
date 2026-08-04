@@ -114,13 +114,13 @@ for endpoint in [
 if len(all_outages) == 0:
 
     message = (
-        "✅ **Maynilad Monitor**\n\n"
+        "@everyone \n \n ✅ **Maynilad Monitor**\n\n"
         "No active interruptions were found."
     )
 
 else:
 
-    message = "🚨 **Maynilad Interruption Detected** 🚨\n\n"
+    message = "@everyone \n\n 🚨 **Maynilad Interruption Detected** 🚨\n\n"
 
     for outage in all_outages:
 
