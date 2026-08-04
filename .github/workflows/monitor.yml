@@ -31,6 +31,7 @@ jobs:
       - name: Run checker
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          MAYNILAD_CAN: ${{secrets.MAYNILAD_CAN }}
         run: python checker.py
 
       - name: Commit updated state
