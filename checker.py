@@ -13,7 +13,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 CAN = "59982918"
 
-WEBHOOK_URL = "https://discord.com/api/webhooks/1534218235778437220/7mR65Kvs6vYZdDwQtDWzIj8gMPpWZDyhDF9m4OrWZGB4hP1cMgTKfTMIWh-1MkECO6pT"
+WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
 
 BASE_URL = "https://www.mayniladwater.com.ph/wp-json/interruptions"
 STATE_FILE = "state.json"
