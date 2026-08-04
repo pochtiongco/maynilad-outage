@@ -11,7 +11,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # CONFIGURATION
 # ===========================
 
-CAN = "59982918"
+CAN = os.getenv("MAYNILAD_CAN")
 
 WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
 
