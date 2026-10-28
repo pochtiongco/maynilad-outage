@@ -54,9 +54,9 @@ def send_discord(message):
 # ===========================
 
 def check_endpoint(endpoint):
-    url = f"{BASE_URL}/{endpoint}?CAN={CAN}"
+    url = f"{BASE_URL}/{endpoint}?id=&CAN={CAN}"
 
-    response = requests.get(url, verify=False)
+    response = requests.get(url, timeout=30, verify=False)
 
     if response.status_code != 200:
         print(f"Failed to check {endpoint}")
