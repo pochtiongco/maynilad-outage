@@ -28,6 +28,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests beautifulsoup4
 
+      - name: Debug request
+        run: |
+          curl -sS -i --max-time 30 \
+            "https://www.mayniladwater.com.ph/wp-json/interruptions/emergency?CAN=${{ secrets.MAYNILAD_CAN }}" \
+            | head -40
+
       - name: Run checker
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
